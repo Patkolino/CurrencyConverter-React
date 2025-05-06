@@ -65,7 +65,7 @@ const CurrencyForm = () => {
 
                 <div className="form__buttons">
                     <button className="form__button form__button--convert">Convert</button>
-                    <button onClick={formReset} className="form__button form__button--clear" type="reset">Clear fields</button>
+                    <button onClick={formReset} className="form__button form__button--clear" type="button">Clear fields</button>
                 </div>
 
                 <Result result={result} />
