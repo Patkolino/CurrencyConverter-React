@@ -8,36 +8,38 @@
 
 .form__legend {
     text-align: center;
-    padding: 15px 0 0 0;
+    padding: 10px 0 10px 0;
     font-size: large;
 }
 
 .form__fieldset {
     border: none;
+    max-width: 350px;
 }
 
 .form__label {
-    padding-bottom: 5px;
-    display: block;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    align-items: center;
 }
 
 .form__span {
-    display: block;
-    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .form__paragraph {
-    margin-bottom: 10px;
+    margin: 10px 0 10px 0;
     text-align: center;
-}
-
-.form__paragraph--hidden {
-    visibility: hidden;
+    word-wrap: break-word;
 }
 
 .form__container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin: 5px 0 5px 0;
 }
 
 .form__button {
@@ -46,34 +48,45 @@
     letter-spacing: 1.5px;
     border-style: double;
     width: 100%;
-    margin: 0 5px;
 }
 
 .form__field {
     border-radius: 5px;
     border: none;
     text-align: center;
-    max-width: 50%;
+    max-width: 100%;
+    padding: 0;
 }
 
 .form__select {
     border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+
+.form__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
 }
 
 .form__button--convert {
     background-color: rgba(43, 235, 43, 0.581);
+    transition: background-color 0.5s ease;
 }
 
 .form__button--convert:hover {
-    background-color: rgba(43, 235, 43, 0.853);
+    background-color: rgb(43, 235, 43);
 }
 
 .form__button--clear {
     background-color: rgb(212, 21, 21);
+    transition: background-color 0.5s ease;
 }
 
 .form__button--clear:hover {
-    background-color: rgba(255, 0, 0, 0.903)
+    background-color: rgba(255, 0, 0, 0.948)
 }
 
 .form__radio {
@@ -83,7 +96,8 @@
     width: 12px;
     height: 12px;
     border: 3px solid black;
-    margin: 0 auto;
+    margin-right: 2px;
+    transition: background-color 0.3s;
 }
 
 .form__radio:checked {
