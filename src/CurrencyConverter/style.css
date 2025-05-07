@@ -104,3 +104,9 @@
     border: 2.5px solid rgb(0, 0, 0);
     background-color: rgb(14, 252, 38);
 }
+
+@media(max-width: 767px) {
+    .form__label {
+        grid-template-columns: 1fr;
+    }
+}
