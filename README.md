@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Here’s a quick demo of the app in action:
 
-https://github.com/Patkolino/CurrencyConverter-React/blob/main/src/assets/CurrencyConverterDemo.mp4
+https://github.com/user-attachments/assets/36806eaf-64f6-402c-bb8d-d274b614f3a8
 
 I invite you to test it out:
 https://patkolino.github.io/CurrencyConverter-React/
