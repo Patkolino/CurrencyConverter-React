@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Currency Converter App
+
+A simple and efficient currency converter built with React, allowing users to convert between multiple currencies -  exchange rates are **fixed** as they are not fetched real-time at this moment.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+Here’s a quick demo of the app in action:
 
-### `npm start`
+<video autoplay loop muted playsinline> <source src="src/assets/CurrencyConverterDemo.mp4" type="video/mp4" /> </video>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I invite you to test it out:
+https://patkolino.github.io/CurrencyConverter-React/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Multiple currencies**: App is currently supporting 4 currencies (EUR, USD, GBP and PLN)
+- **Interactive UI**: Simple responsive design with a clean user interface
+- **Error handling**: Proper handling for invalid, missing or identical currencies or values
+- **Reset functionality**: Easily clear all input fields with a single click
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies
 
-### `npm run build`
+- **React**: Used for building the user interface
+- **React Hook**: `useState` for managing states
+- **CSS**: Custom styling with responsive design for mobile and smaller screens
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Choose currency**: Select the currency from which you want to make the conversion *(mandatory field)*
+2. **Insert amount** : Enter the amount you want to convert *(only possitive whole numbers are accepted)*
+3. **Select currency to which you want to convert**: Choose the currency to which you want to make the conversion *(mandatory field)*
+4. **Click Convert**: 
+- If all fields are valid and selected currencies are different, the conversion result will be displayed bellow the buttons
+- If any of the mandatory fields are missing or the same currency is selected for both "from" and "to", an error is shown (either browser validation message for missing input or an alert message if both currencies are same)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Additionally, the **Clear fields** button can be used at any time to reset the form to its initial state. This also removes the conversion result, if one was previously displayed.
