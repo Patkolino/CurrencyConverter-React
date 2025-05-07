@@ -6,6 +6,23 @@ import DesiredCurrency from "./desiredCurrency";
 import Result from "./result";
 import "./style.css";
 
+const calculateResult = (amount, from, to, rates) => {
+    if (from === to) {
+        return null;
+    }
+
+    const rate = rates[from][to];
+    const outputAmount = (amount * rate).toFixed(2);
+
+    return {
+        inputAmount: +amount,
+        from,
+        to,
+        outputAmount,
+    }
+};
+
+
 const CurrencyForm = () => {
     const [fromCurrency, setFromCurrency] = useState("EUR");
     const [amount, setAmount] = useState("");
@@ -15,20 +32,14 @@ const CurrencyForm = () => {
     const onSubmit = (event) => {
         event.preventDefault();
 
-        if (fromCurrency === toCurrency) {
-            alert("Please choose different currency");
+        const result = calculateResult(amount, fromCurrency, toCurrency, rates);
+
+        if (!result) {
+            alert("From and to currency must be different!");
             return;
         }
 
-        const rate = rates[fromCurrency][toCurrency];
-        const converted = amount * rate;
-
-        setResult({
-            inputAmount: +amount,
-            from: fromCurrency,
-            to: toCurrency,
-            outputAmount: converted.toFixed(2),
-        });
+        setResult(result);
     };
 
     const formReset = () => {
