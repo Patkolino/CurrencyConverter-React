@@ -55,7 +55,7 @@ const CurrencyForm = () => {
                 <legend className="form__legend">Currency converter</legend>
                 <>
                     <FromCurrency
-                        value={fromCurrency}
+                        fromCurrency={fromCurrency}
                         onChange={({ target }) => setFromCurrency(target.value)}
                     />
                 </>
