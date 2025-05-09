@@ -8,13 +8,12 @@ html {
   box-sizing: inherit;
 }
 
-body {
+#root {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
-  max-width: 1000px;
-  background-image: url("./assets/background.webp");
+  background-image: url("./assets/background.jpg");
   display: flex;
   align-items: center;
   justify-content: center;

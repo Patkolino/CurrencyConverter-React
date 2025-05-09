@@ -1,0 +1,137 @@
+.form {
+    margin: 0 auto;
+    background-color: rgb(118, 221, 221);
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 5px #272793;
+    overflow-x: auto;
+    font-size: 1.5rem;
+}
+
+.form__fieldset {
+    border: none;
+    max-width: 700px;
+    padding: 20px;
+    margin: 0;
+}
+
+.form__legend {
+    text-align: center;
+    padding: 20px 0 10px 0;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.form__label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    align-items: center;
+}
+
+.form__span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__paragraph {
+    margin: 10px 0 10px 0;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.form__container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin: 5px 0 5px 0;
+}
+
+.form__button {
+    border-radius: 10px;
+    padding: 5px 10px;
+    letter-spacing: 1.5px;
+    border-style: double;
+    width: 100%;
+    border-color: black;
+}
+
+.form__field {
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    max-width: 100%;
+    padding: 0;
+}
+
+.form__select {
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+
+.form__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.form__button--convert {
+    background-color: rgba(43, 235, 43, 0.581);
+    transition: background-color 0.5s ease;
+}
+
+.form__button--convert:hover {
+    background-color: rgb(43, 235, 43);
+}
+
+.form__button--clear {
+    background-color: rgb(212, 21, 21);
+    transition: background-color 0.5s ease;
+}
+
+.form__button--clear:hover {
+    background-color: rgba(255, 0, 0, 0.948)
+}
+
+.form__radio {
+    appearance: none;
+    background-color: white;
+    border-radius: 70%;
+    width: 20px;
+    height: 20px;
+    border: 3px solid black;
+    margin: 0 3px 3px 0;
+    transition: background-color 0.3s;
+}
+
+.form__radio:checked {
+    border: 2.5px solid rgb(0, 0, 0);
+    background-color: rgb(14, 252, 38);
+}
+
+@media(max-width: 767px) {
+    .form__label {
+        grid-template-columns: 1fr;
+    }
+
+    .form {
+        font-size: 20px;
+    }
+
+    .form__legend {
+        font-size: 25px;
+    }
+
+    .form__radio {
+        width: 15px;
+        height: 15px;
+    }
+
+    .form__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+}
