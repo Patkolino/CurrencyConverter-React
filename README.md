@@ -10,7 +10,7 @@ Here’s a quick demo of the app in action:
 
 https://github.com/user-attachments/assets/36806eaf-64f6-402c-bb8d-d274b614f3a8
 
-<video autoplay muted loop playsinline src="src/assets/CurrencyConverterDemo.mp4" title="Title"></video>
+<video autoplay muted loop playsinline src="CurrencyConverterDemo.mp4" title="App demo preview"></video>
 
 I invite you to test it out:
 https://patkolino.github.io/CurrencyConverter-React/
