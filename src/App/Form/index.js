@@ -1,9 +1,8 @@
-import rates from "./rates";
+import rates from "../rates";
 import { useState } from "react";
-import FromCurrency from "./fromCurrency";
-import AmountInput from "./amountInput";
-import DesiredCurrency from "./desiredCurrency";
-import Result from "./result";
+import FromCurrency from "./FromCurrency";
+import DesiredCurrency from "./DesiredCurrency";
+import Result from "./Result/result";
 import "./style.css";
 
 const calculateResult = (amount, from, to, rates) => {
@@ -23,7 +22,7 @@ const calculateResult = (amount, from, to, rates) => {
 };
 
 
-const CurrencyForm = () => {
+const Form = () => {
     const [fromCurrency, setFromCurrency] = useState("EUR");
     const [amount, setAmount] = useState("");
     const [toCurrency, setToCurrency] = useState();
@@ -61,10 +60,19 @@ const CurrencyForm = () => {
                 </>
 
                 <p>
-                    <AmountInput
-                        value={amount}
-                        onChange={({ target }) => setAmount(target.value)}
-                    />
+                    <label className="form__label">Insert amount*
+                        <input
+                            className="form__field"
+                            type="number"
+                            required
+                            min="1"
+                            step="1"
+                            placeholder="Insert amount"
+                            name="amount"
+                            value={amount}
+                            onChange={({ target }) => setAmount(target.value)}
+                        />
+                    </label>
                 </p>
 
                 <div>
@@ -86,4 +94,4 @@ const CurrencyForm = () => {
     );
 }
 
-export default CurrencyForm;
+export default Form;

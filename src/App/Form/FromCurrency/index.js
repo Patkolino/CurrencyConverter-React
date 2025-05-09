@@ -1,4 +1,4 @@
-import currencies from "./currencies";
+import currencies from "../../currencies";
 
 const FromCurrency = ({ fromCurrency, onChange }) => (
     <label className="form__label">Choose currency*
