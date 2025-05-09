@@ -113,6 +113,7 @@
 @media(max-width: 767px) {
     .form__label {
         grid-template-columns: 1fr;
+        text-align: center;
     }
 
     .form {
@@ -131,7 +132,5 @@
     .form__container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        justify-content: center;
     }
 }
