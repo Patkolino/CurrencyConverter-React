@@ -27,7 +27,7 @@ https://patkolino.github.io/CurrencyConverter-React/
 
 - **React**: Used for building the user interface
 - **React Hooks**: `useState`, `useEffect` for state management and side effects (live clock)
--**JavaScript**: `setInterval` used within a custom hook to update time every second
+- **JavaScript**: `setInterval` used within a custom hook to update time every second
 - **CSS**: Custom styling with responsive design for mobile and smaller screens
 
 ## Usage
