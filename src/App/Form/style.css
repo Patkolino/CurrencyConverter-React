@@ -4,7 +4,7 @@
     border-radius: 25px;
     box-shadow: 0px 0px 10px 5px #272793;
     overflow-x: auto;
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 .form__fieldset {
@@ -18,7 +18,7 @@
     text-align: center;
     padding: 20px 0 10px 0;
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 28px;
 }
 
 .form__label {
@@ -34,17 +34,11 @@
     justify-content: center;
 }
 
-.form__paragraph {
-    margin: 10px 0 10px 0;
-    text-align: center;
-    word-wrap: break-word;
-    min-height: 30px;
-}
-
 .form__container {
     display: grid;
     grid-template-columns: repeat(4, auto);
     margin: 5px 0 5px 0;
+    word-break: break-word;
 }
 
 .form__button {
@@ -60,7 +54,7 @@
     border-radius: 5px;
     border: none;
     text-align: center;
-    max-width: 100%;
+    width: 100%;
     padding: 0;
 }
 

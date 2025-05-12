@@ -1,5 +1,7 @@
+import "./style.css";
+
 const Result = ({ result }) => (
-    <p className="form__paragraph">
+    <p className="result">
         {result &&
             <>
                 For <strong>{result.inputAmount} {result.from}</strong> you will receive{" "}
