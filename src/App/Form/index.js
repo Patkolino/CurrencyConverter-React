@@ -4,7 +4,7 @@ import FromCurrency from "./FromCurrency";
 import DesiredCurrency from "./DesiredCurrency";
 import Result from "./Result/result";
 import "./style.css";
-import Clock from "../Clock";
+import Clock from "./Clock";
 
 const calculateResult = (amount, from, to, rates) => {
     if (from === to) {
