@@ -1,6 +1,6 @@
 # Currency Converter App
 
-A simple and efficient currency converter built with React, allowing users to convert between multiple currencies -  exchange rates are **fixed** as they are not fetched real-time at this moment.
+A simple and efficient currency converter built with React allows users to convert between multiple currencies - exchange rates are **fixed** as they are not fetched in real-time.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Here’s a quick demo of the app in action:
 
-https://github.com/user-attachments/assets/36806eaf-64f6-402c-bb8d-d274b614f3a8
+https://github.com/user-attachments/assets/be151df2-cae3-4174-b2c6-4601e4805d2c
 
 <video autoplay muted loop playsinline src="CurrencyConverterDemo.mp4" title="App demo preview"></video>
 
@@ -17,9 +17,9 @@ https://patkolino.github.io/CurrencyConverter-React/
 
 ## Features
 
-- **Multiple currencies**: App is currently supporting 4 currencies (EUR, USD, GBP and PLN)
+- **Multiple currencies**: App is currently supporting 4 currencies (EUR, USD, GBP, and PLN)
 - **Interactive UI**: Simple responsive design with a clean user interface
-- **Error handling**: Proper handling for invalid, missing or identical currencies or values
+- **Error handling**: Proper handling for invalid, missing, or identical currencies or values
 - **Reset functionality**: Easily clear all input fields with a single click
 - **Live Date and time**: This project includes a real-time date and time display
 
@@ -36,7 +36,7 @@ https://patkolino.github.io/CurrencyConverter-React/
 2. **Insert amount** : Enter the amount you want to convert *(only possitive whole numbers are accepted)*
 3. **Select currency to which you want to convert**: Choose the currency to which you want to make the conversion *(mandatory field)*
 4. **Click Convert**: 
-- If all fields are valid and selected currencies are different, the conversion result will be displayed bellow the buttons
-- If any of the mandatory fields are missing or the same currency is selected for both "from" and "to", an error is shown (either browser validation message for missing input or an alert message if both currencies are same)
+- If all fields are valid and selected currencies are different, the conversion result will be displayed below the buttons
+- If any of the mandatory fields are missing or the same currency is selected for both "from" and "to", an error is shown (either a browser validation message for missing input or an alert message if both currencies are the same)
 
 Additionally, the **Clear fields** button can be used at any time to reset the form to its initial state. This also removes the conversion result, if one was previously displayed.
