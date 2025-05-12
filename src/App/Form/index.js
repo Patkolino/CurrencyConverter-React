@@ -4,6 +4,7 @@ import FromCurrency from "./FromCurrency";
 import DesiredCurrency from "./DesiredCurrency";
 import Result from "./Result/result";
 import "./style.css";
+import Clock from "../Clock";
 
 const calculateResult = (amount, from, to, rates) => {
     if (from === to) {
@@ -50,6 +51,7 @@ const Form = () => {
 
     return (
         <form className="form" onSubmit={onSubmit}>
+            <Clock />
             <fieldset className="form__fieldset">
                 <legend className="form__legend">Currency converter</legend>
                 <>
