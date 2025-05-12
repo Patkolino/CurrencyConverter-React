@@ -21,11 +21,13 @@ https://patkolino.github.io/CurrencyConverter-React/
 - **Interactive UI**: Simple responsive design with a clean user interface
 - **Error handling**: Proper handling for invalid, missing or identical currencies or values
 - **Reset functionality**: Easily clear all input fields with a single click
+- **Live Date and time**: This project includes a real-time date and time display
 
 ## Technologies
 
 - **React**: Used for building the user interface
-- **React Hook**: `useState` for managing states
+- **React Hooks**: `useState`, `useEffect` for state management and side effects (live clock)
+-**JavaScript**: `setInterval` used within a custom hook to update time every second
 - **CSS**: Custom styling with responsive design for mobile and smaller screens
 
 ## Usage
