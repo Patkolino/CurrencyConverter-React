@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Here’s a quick demo of the app in action:
 
-https://github.com/user-attachments/assets/be151df2-cae3-4174-b2c6-4601e4805d2c
+https://github.com/user-attachments/assets/3a4bf9fd-198f-4275-91f3-01a322d1883b
 
 <video autoplay muted loop playsinline src="CurrencyConverterDemo.mp4" title="App demo preview"></video>
 
