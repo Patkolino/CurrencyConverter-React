@@ -1,6 +1,6 @@
 import "./style.css";
 
-const { useState, useEffect } = require("react")
+import { useEffect, useState } from "react";
 
 const formatDate = (date) => date.toLocaleString(undefined, {
     weekday: "long",
