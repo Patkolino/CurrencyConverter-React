@@ -1,9 +1,9 @@
 import currencies from "../../currencies";
+import { Select, LabelText } from "./styled";
 
 const FromCurrency = ({ fromCurrency, onChange }) => (
-    <label className="form__label">Choose currency*
-        <select
-            className="form__select"
+    <LabelText>Choose currency*
+        <Select
             name="currency"
             value={fromCurrency}
             onChange={onChange}
@@ -12,8 +12,8 @@ const FromCurrency = ({ fromCurrency, onChange }) => (
                 <option key={currency} value={currency} title={title}>{currency}
                 </option>
             ))}
-        </select>
-    </label>
+        </Select>
+    </LabelText>
 );
 
 export default FromCurrency;

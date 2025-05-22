@@ -3,8 +3,8 @@ import { useState } from "react";
 import FromCurrency from "./FromCurrency";
 import DesiredCurrency from "./DesiredCurrency";
 import Result from "./Result/result";
-import "./style.css";
 import Clock from "../Clock";
+import { Wrapper, Field, Title, LabelText, ButtonsWrapper, Button, FormField } from "./styled";
 
 const calculateResult = (amount, from, to, rates) => {
     if (from === to) {
@@ -50,10 +50,10 @@ const Form = () => {
     };
 
     return (
-        <form className="form" onSubmit={onSubmit}>
+        <Wrapper onSubmit={onSubmit}>
             <Clock />
-            <fieldset className="form__fieldset">
-                <legend className="form__legend">Currency converter</legend>
+            <Field>
+                <Title>Currency converter</Title>
                 <>
                     <FromCurrency
                         fromCurrency={fromCurrency}
@@ -62,9 +62,8 @@ const Form = () => {
                 </>
 
                 <p>
-                    <label className="form__label">Insert amount*
-                        <input
-                            className="form__field"
+                    <LabelText>Insert amount*
+                        <FormField
                             type="number"
                             required
                             min="1"
@@ -74,7 +73,7 @@ const Form = () => {
                             value={amount}
                             onChange={({ target }) => setAmount(target.value)}
                         />
-                    </label>
+                    </LabelText>
                 </p>
 
                 <div>
@@ -84,15 +83,15 @@ const Form = () => {
                     />
                 </div>
 
-                <div className="form__buttons">
-                    <button className="form__button form__button--convert">Convert</button>
-                    <button onClick={formReset} className="form__button form__button--clear" type="button">Clear fields</button>
-                </div>
+                <ButtonsWrapper>
+                    <Button $convert>Convert</Button>
+                    <Button onClick={formReset} type="button" $clear>Clear fields</Button>
+                </ButtonsWrapper>
 
                 <Result result={result} />
 
-            </fieldset>
-        </form>
+            </Field>
+        </Wrapper>
     );
 }
 

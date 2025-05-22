@@ -1,13 +1,14 @@
 import currencies from '../../currencies';
 
+import { StyledText, Radios, Wrapper } from './styled';
+
 const DesiredCurrency = ({ toCurrency, setToCurrency }) => (
     <>
         <span>Select currency to which you want to convert*</span>
-        <div className="form__container">
+        <Wrapper>
             {currencies.map(({ currency, title }, index) => (
-                <span className="form__span" key={currency}>
-                    <input
-                        className="form__radio"
+                <StyledText key={currency}>
+                    <Radios
                         type="radio"
                         required
                         id={`form__radio${index}`}
@@ -17,9 +18,9 @@ const DesiredCurrency = ({ toCurrency, setToCurrency }) => (
                         onChange={({ target }) => setToCurrency(target.value)}
                     />
                     <label htmlFor={`form__radio${index}`} title={title}>{currency}</label>
-                </span>
+                </StyledText>
             ))}
-        </div>
+        </Wrapper>
     </>
 );
 

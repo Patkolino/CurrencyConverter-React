@@ -1,4 +1,4 @@
-import "./style.css";
+import { Wrapper } from "./styled";
 
 import { useEffect, useState } from "react";
 
@@ -26,11 +26,11 @@ const Clock = () => {
     }, []);
 
     return (
-        <div className="clock">
+        <Wrapper>
             Today is
             {" "}
             {formatDate(date)}
-        </div>
+        </Wrapper>
     );
 
 };

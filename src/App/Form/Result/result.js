@@ -1,14 +1,14 @@
-import "./style.css";
+import { Wrapper } from "./styled";
 
 const Result = ({ result }) => (
-    <p className="result">
+    <Wrapper>
         {result &&
             <>
                 For <strong>{result.inputAmount} {result.from}</strong> you will receive{" "}
                 <strong>{result.outputAmount} {result.to}</strong>.
             </>
         }
-    </p>
+    </Wrapper>
 );
 
 export default Result;
