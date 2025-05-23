@@ -18,17 +18,18 @@ https://patkolino.github.io/CurrencyConverter-React/
 ## Features
 
 - **Multiple currencies**: App is currently supporting 4 currencies (EUR, USD, GBP, and PLN)
-- **Interactive UI**: Simple responsive design with a clean user interface
-- **Error handling**: Proper handling for invalid, missing, or identical currencies or values
-- **Reset functionality**: Easily clear all input fields with a single click
+- **Interactive UI**: Simple responsive design with a clean user interface for both mobile and desktop users
+- **Error handling**: Handles missing inputs, same-currency selections, and invalid values with helpfull feedback and messages
+- **Reset functionality**: Instantly clears all input fields and result with a single click
 - **Live Date and time**: This project includes a real-time date and time display
 
 ## Technologies
 
 - **React**: Used for building the user interface
-- **React Hooks**: `useState`, `useEffect` for state management and side effects (live clock)
-- **JavaScript**: `setInterval` used within a custom hook to update time every second
-- **CSS**: Custom styling with responsive design for mobile and smaller screens
+- **React Hooks**: `useState`, `useEffect` for state management and side effects. `useCurrentDate` custom hook that handles real-time clock logic using `setInterval`
+- **Styled Components** - CSS in JavaScript for clean, component-scoped styling
+- **ThemeProvider & GlobalStyle** - Consistent theme and global styles are set up across the app
+- **normalize.css** - Installed via npm to ensure consistent styling across different browsers
 
 ## Usage
 
