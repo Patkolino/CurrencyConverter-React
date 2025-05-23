@@ -31,7 +31,6 @@ const Form = () => {
 
     const onSubmit = (event) => {
         event.preventDefault();
-
         const result = calculateResult(amount, fromCurrency, toCurrency, rates);
 
         if (!result) {

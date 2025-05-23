@@ -10,10 +10,10 @@ export const theme = {
     },
 
     fontSizes: {
-        small: '16px',
+        small: "16px",
         medium: "20px",
         big: "24px",
-        large:"28px",
+        large: "28px",
     },
 
     breakpoint: {

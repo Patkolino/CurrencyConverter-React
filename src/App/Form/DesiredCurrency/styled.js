@@ -27,7 +27,6 @@ export const Radios = styled.input`
     border: 3px solid ${({ theme }) => theme.color.black};
     margin: 0 3px 3px 0;
 
-
     &:checked {
     border: 2.5px solid ${({ theme }) => theme.color.black};
     background-color: ${({ theme }) => theme.color.green}
