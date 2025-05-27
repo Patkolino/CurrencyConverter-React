@@ -79,3 +79,39 @@ export const FormField = styled.input`
     width: 100%;
     padding: 0;
 `;
+
+export const ErrorMessage = styled.div`
+  position: absolute;
+  top: -10px; 
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 90%;
+  width: max-content;
+  word-wrap: break-word;
+  background:${({ theme }) => theme.color.white};
+  color: ${({ theme }) => theme.color.red};
+  padding: 5px;
+  border: 1px solid ${({ theme }) => theme.color.white};
+  border-radius: 5px;
+  font-size: ${({ theme }) => theme.fontSizes.small};
+  display: flex;
+  box-shadow: 0 5px 10px ${({ theme }) => theme.color.black};
+  z-index: 100;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent ${({ theme }) => theme.color.white} transparent;
+  }
+`;
+
+export const ErrorWrapper = styled.div`
+    position: relative;
+    display: inline-block;
+`;

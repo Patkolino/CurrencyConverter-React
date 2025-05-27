@@ -4,7 +4,8 @@ import FromCurrency from "./FromCurrency";
 import DesiredCurrency from "./DesiredCurrency";
 import Result from "./Result/result";
 import Clock from "../Clock";
-import { Wrapper, Field, Title, LabelText, ButtonsWrapper, Button, FormField } from "./styled";
+import { Wrapper, Field, Title, LabelText, ButtonsWrapper, Button, FormField, ErrorMessage, ErrorWrapper } from "./styled";
+import { useError } from "./useError";
 
 const calculateResult = (amount, from, to, rates) => {
     if (from === to) {
@@ -22,22 +23,23 @@ const calculateResult = (amount, from, to, rates) => {
     }
 };
 
-
 const Form = () => {
     const [fromCurrency, setFromCurrency] = useState("EUR");
     const [amount, setAmount] = useState("");
     const [toCurrency, setToCurrency] = useState();
     const [result, setResult] = useState();
+    const [error, setError] = useError();
 
     const onSubmit = (event) => {
         event.preventDefault();
         const result = calculateResult(amount, fromCurrency, toCurrency, rates);
 
         if (!result) {
-            alert("From and to currency must be different!");
+            setError("⚠️ From and to currency must be different!");
             return;
         }
 
+        setError("");
         setResult(result);
     };
 
@@ -46,6 +48,7 @@ const Form = () => {
         setFromCurrency("EUR");
         setToCurrency();
         setResult();
+        setError("");
     };
 
     return (
@@ -75,12 +78,13 @@ const Form = () => {
                     </LabelText>
                 </p>
 
-                <div>
+                <ErrorWrapper>
                     <DesiredCurrency
                         toCurrency={toCurrency}
                         setToCurrency={setToCurrency}
                     />
-                </div>
+                    {error && <ErrorMessage>{error}</ErrorMessage>}
+                </ErrorWrapper>
 
                 <ButtonsWrapper>
                     <Button $convert>Convert</Button>
